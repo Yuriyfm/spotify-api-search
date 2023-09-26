@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Spotify API Search
 
-## Getting Started
+## Введение
+Проект "Spotify API Search" — это приложение на Next.js для работы с API Spotify. Разработано с использованием TypeScript и SCSS.
 
-First, run the development server:
+## Установка и Запуск
+1. **Клонирование репозитория**: Клонируйте репозиторий на ваш локальный компьютер.
+2. **Установка зависимостей**: Запустите `npm install` или `yarn install`.
+3. **Запуск сервера**: Выполните команду `npm run dev`, `yarn dev` или `pnpm dev`.
+4. **Просмотр в браузере**: Откройте браузер и перейдите по адресу `http://localhost:3000`.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Добавьте .env файл (подключение переменных окружения)
+1. **Добавьте в файл**: 
 ```
+NEXT_SPOTIFY_CLIENT_ID={ваш client id}
+NEXT_SPOTIFY_CLIENT_SECRET={ваш client secret}
+NEXT_ACCOUNTS_API_URL=https://accounts.spotify.com/api/
+NEXT_SPOTIFY_API_URL=https://api.spotify.com/v1/
+```
+## Основные Функции
+- Взаимодействие с REST API Spotify.
+- Поиск и отображение информации о треках, альбомах и исполнителях.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Технологический Стек
+- Next.js
+- TypeScript
+- SCSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Дополнительные Инструменты
+- NextFont для оптимизации и загрузки пользовательских шрифтов.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Ссылки и Ресурсы
+- [Next.js Документация](https://nextjs.org/docs)
+- [Next.js GitHub Репозиторий](https://github.com/vercel/next.js/)
