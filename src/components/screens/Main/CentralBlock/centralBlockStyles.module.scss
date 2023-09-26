@@ -1,0 +1,9 @@
+@import 'src/commonStyles/variables';
+@import "src/commonStyles/mixins";
+
+.centralBlockContainer {
+  height: 100%;
+  flex: 3;
+  @include blockStyle($main-block-background-color);
+  margin-bottom: $blocks-margin;
+}

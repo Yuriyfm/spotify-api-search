@@ -1,0 +1,26 @@
+@import "src/commonStyles/variables";
+
+.titleH1 {
+  margin-block: 0;
+  font-weight: 700;
+  padding-block-end: 1.6rem;
+  color: white;
+}
+
+.paragraph {
+  font-size: $font-size-tag;
+  line-height: 140%;
+  font-weight: 400;
+  color: white;
+}
+
+.customLink {
+  text-decoration: none;
+  color: white;
+  font-size: $font-size-tag;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: $focused-link-color;
+  }
+}

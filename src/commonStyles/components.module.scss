@@ -1,0 +1,60 @@
+@import "src/commonStyles/variables";
+@import "src/commonStyles/mixins";
+
+.primaryButton {
+  @include buttonBase(#343434);
+
+  &:hover {
+    background-color: #2a2a2a;
+  }
+  &:active {
+    background-color: #1f1f1f;
+    transform: scale(0.95);
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 52, 52, 0.5);
+  }
+  &:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+
+    &__text {
+      color: #7f8c8d;
+    }
+  }
+  &__text {
+    color: #f1f1f1;
+    font-size: 1.6rem;
+  }
+}
+
+.PrimaryButton--selected {
+  @include buttonBase(white);
+  &:active {
+    background-color: #1f1f1f;
+    transform: scale(0.95);
+  }
+  &__text {
+    color: $color-black;
+    font-size: 1.6rem;
+  }
+}
+
+.tagItem {
+  @include tagItemBase(transparent, white);
+  &:hover {
+    background-color: $hover-tag-background-color;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.tagItem--selected {
+  @include tagItemBase(white, black);
+  &:active {
+    transform: scale(0.95);
+  }
+}
+

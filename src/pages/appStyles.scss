@@ -1,0 +1,60 @@
+@import "src/commonStyles/variables";
+
+html {
+  font-size: 10px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #000000;
+}
+
+/* Для Chrome */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: $main-block-background-color
+}
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7a7a7a;
+}
+
+/* Для Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #555 $main-block-background-color;
+}
+
+*::-moz-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+*::-moz-scrollbar-thumb:hover {
+  background-color: #7a7a7a;
+}
+
+*::-moz-scrollbar-track {
+  background-color: $main-block-background-color;
+}
