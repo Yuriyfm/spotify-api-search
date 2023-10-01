@@ -1,8 +1,8 @@
 @import "src/commonStyles/variables";
 @import "src/commonStyles/mixins";
 
-.primaryButton {
-  @include buttonBase(#343434);
+.primary-button {
+  @include button-base(#343434);
 
   &:hover {
     background-color: #2a2a2a;
@@ -29,8 +29,8 @@
   }
 }
 
-.PrimaryButton--selected {
-  @include buttonBase(white);
+.primary-button_selected {
+  @include button-base(white);
   &:active {
     background-color: #1f1f1f;
     transform: scale(0.95);
@@ -41,8 +41,36 @@
   }
 }
 
-.tagItem {
-  @include tagItemBase(transparent, white);
+.action-button {
+  @include button-base(#1ed760);
+
+  &:hover {
+    background-color: #15913f;
+  }
+  &:active {
+    background-color: #0e5d27;
+    transform: scale(0.95);
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 52, 52, 0.5);
+  }
+  &:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    &__text {
+      font-size: 2rem;
+      color: #1f1f1f;
+    }
+  }
+  &__text {
+    color: #1f1f1f;
+    font-size: 1.8rem;
+  }
+}
+
+.tag-item {
+  @include tag-item_base(transparent, white);
   &:hover {
     background-color: $hover-tag-background-color;
   }
@@ -51,10 +79,75 @@
   }
 }
 
-.tagItem--selected {
-  @include tagItemBase(white, black);
+.tag-item_selected {
+  @include tag-item_base(white, black);
   &:active {
     transform: scale(0.95);
   }
 }
 
+.stylized-input {
+  width: 100%;
+  padding: .8rem 1.2rem;
+  background-color: #2a2a2a;
+  border: solid 1px #2a2a2a;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #3c3c3c;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.4rem;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $text-color-primary;
+    transition: 0.4s;
+    border-radius: 3.4rem;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 2rem;
+      width: 2rem;
+      left: .3rem;
+      bottom: .25rem;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: #1ed760;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(2.4rem);
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #1ed760;
+  }
+}

@@ -10,10 +10,10 @@ const GenresSearchResult: FC = () => {
 
   return (
     <div>
-      <h2 className={typography.titleH1}>{`Результаты поиска плейлистов по жанру ${selectedGenre}`}</h2>
+      <h2 className={typography['title-h1']}>{`Результаты поиска плейлистов по жанру ${selectedGenre}`}</h2>
       <div className={styles.playlistsByGenresContainer}>
         {playlistsByGenre.map((playlist: any) => (
-          <Link className={typography.customLink}  target="_blank"
+          <Link className={typography['custom-link']}  target="_blank"
                 key={playlist.href} href={playlist.external_urls.spotify} passHref>
             {playlist.description}
           </Link>

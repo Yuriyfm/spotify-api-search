@@ -17,9 +17,9 @@ const AllGenres: FC = () => {
   }
 
   return (
-    <div className={styles.allGenresContainer}>
+    <div className={styles['all-genres-container']}>
       {allGenres.map((genre: string) => (
-        <span key={genre} className={selectedGenre !== genre ? components.tagItem: components['tagItem--selected']}
+        <span key={genre} className={selectedGenre !== genre ? components['tag-item']: components['tag-item_selected']}
               onClick={() => selectGenreHandler(genre)}>{genre}</span>
       ))}
     </div>

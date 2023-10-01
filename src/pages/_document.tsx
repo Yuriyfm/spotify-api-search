@@ -4,7 +4,7 @@ export default function _document() {
   return (
     <Html lang={'en'}>
       <Head>
-        <meta name="description" content="Spotify statistics"/>
+        <meta name="description" content="Spotify Deep Search"/>
         <meta name="keywords" content="Spotify, statistics, genres, authors, artists"/>
         <link
           rel="stylesheet"

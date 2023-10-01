@@ -1,16 +1,16 @@
 @import 'src/commonStyles/variables';
 
-@mixin blockStyle($background-color) {
+@mixin block-style($background-color) {
   box-sizing: border-box;
   border-radius: $border-radius-block;
   background-color: $background-color;
   padding: 1rem 2rem;
 }
 
-@mixin buttonBase($background-color) {
+@mixin button-base($background-color) {
   height: 3rem;
   width: auto;
-  padding: 6px 10px;
+  padding: .6rem 1rem;
   border-radius: 50px;
   background-color: $background-color;
   display: flex;
@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-@mixin tagItemBase ($background-color, $text-color) {
+@mixin tag-item_base ($background-color, $text-color) {
   font-size: $font-size-tag;
   padding: .2rem .4rem;
   margin: .4rem 0;

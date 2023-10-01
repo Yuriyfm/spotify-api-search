@@ -9,8 +9,8 @@ const CategoryData: FC = () => {
 
 
   return (
-    <div className={styles.categoryDataContainer}>
-      {category === 'Genres' &&
+    <div className={styles['category-data-container']}>
+      {category === 'Artists' &&
       <AllGenres/>
       }
     </div>

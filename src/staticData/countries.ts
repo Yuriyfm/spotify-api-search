@@ -1,6 +1,6 @@
-[
+export const countries = [
   {"Code": "AF", "Name": "Afghanistan", "rus_name": "Афганистан"},
-  {"Code": "AX", "Name": "Åland Islands", "rus_name": "Аландские острова"},
+  {"Code": "AX", "Name": "Aland Islands", "rus_name": "Аландские острова"},
   {"Code": "AL", "Name": "Albania", "rus_name": "Албания"},
   {"Code": "DZ", "Name": "Algeria", "rus_name": "Алжир"},
   {"Code": "AS", "Name": "American Samoa", "rus_name": "Американское Самоа"},

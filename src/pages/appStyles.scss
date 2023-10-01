@@ -24,15 +24,15 @@ body {
 /* Для Chrome */
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 1rem;
+  height: 1rem;
 }
 ::-webkit-scrollbar-track {
   background-color: $main-block-background-color
 }
 ::-webkit-scrollbar-thumb {
   background-color: #555;
-  border-radius: 10px;
+  border-radius: 1rem;
 
 }
 
@@ -48,7 +48,7 @@ body {
 
 *::-moz-scrollbar-thumb {
   background-color: #555;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 *::-moz-scrollbar-thumb:hover {

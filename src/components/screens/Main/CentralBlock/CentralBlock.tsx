@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useId} from 'react';
 import styles from './centralBlockStyles.module.scss'
 import {RootState} from "@/store/store";
 import MainModeContent from "@/components/screens/Main/CentralBlock/MainModeContent/MainModeContent";
@@ -8,7 +8,7 @@ const CentralBlock: FC = () => {
   const mode: string = useAppSelector((state: RootState) => state.mode.mode)
 
   return (
-    <div className={styles.centralBlockContainer}>
+    <div className={styles['central-block-container']}>
       {mode === 'Главная'
       ? <MainModeContent/>
       : <SearchModeContent/>

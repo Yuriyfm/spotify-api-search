@@ -2,20 +2,35 @@ import React, {FC} from 'react';
 import styles from './leftBarStyles.module.scss'
 import LeftBarMenu from "@/components/screens/Main/LeftBar/Menu/LeftBarMenu";
 import Categories from "@/components/screens/Main/LeftBar/Categories/Categories";
-import Filters from "@/components/screens/Main/LeftBar/Filters/Filters";
-import CategoryData from "@/components/screens/Main/LeftBar/CategoryData/CategoryData";
+import SelectFilters from "@/components/screens/Main/LeftBar/Filters/SelectFilters";
+import {categoryType} from "@/store/categories.slice";
+import {useAppSelector} from "@/hooks/useSelectorAndUseDispatchHooks";
+import {RootState} from "@/store/store";
 
 const LeftBar: FC = () => {
+  const category: categoryType = useAppSelector((state: RootState) => state.categories.category)
 
   return (
-    <div className={styles.leftBarContainer}>
-      <div className={styles.MenuContainer}>
+    <div className={styles['left-bar-container']}>
+      <div className={styles['menu-container']}>
         <LeftBarMenu/>
       </div>
-      <div className={styles.dataContainer}>
+      <div className={styles['data-container']}>
         <Categories/>
-        <Filters/>
-        <CategoryData/>
+        <div className={styles['filters-container']}>
+          {category === 'Artists' &&
+            <SelectFilters/>
+          }
+          {category === 'Playlists' &&
+            <SelectFilters/>
+          }
+          {category === 'Albums' &&
+            <SelectFilters/>
+          }
+          {category === 'Tracks' &&
+            <SelectFilters/>
+          }
+        </div>
       </div>
     </div>
   );

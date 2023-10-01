@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export type categoryType = 'Artists' | 'Genres' | "Countries" | null
+export type categoryType = 'Artists' | 'Albums' | "Playlists" | 'Tracks' | null
 
 export type categoriesState = {
   category: categoryType

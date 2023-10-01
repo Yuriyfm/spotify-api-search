@@ -8,11 +8,11 @@ export type selectOption = {
 
 type selectOptionsType = Array<selectOption>
 
-type PropsType = {
-  options: string[];
-  selectedOption: string | null;
+interface PropsType {
+  options: selectOptionsType;
   selectOptionHandler: (selectedOption: MultiValue<selectOption> | SingleValue<selectOption>, actionMeta: any) => void;
-};
+  selectedOption: selectOption;
+}
 
 const SelectStylized: FC<PropsType> = ({options, selectedOption, selectOptionHandler}) => {
   const selectStyles: StylesConfig<selectOption> = {
@@ -52,18 +52,13 @@ const SelectStylized: FC<PropsType> = ({options, selectedOption, selectOptionHan
     })
   }
 
-  const formattedOptions = options.map((option: any) => ({
-    value: option,
-    label: option
-  }));
-
   return (
-
     <Select
-      options={formattedOptions}
+      options={options}
       styles={selectStyles}
       isClearable={true}
-      value={selectedOption ? { value: selectedOption, label: selectedOption } : null}
+      value={selectedOption}
+      placeholder={''}
       onChange={selectOptionHandler}
     />
   );

@@ -1,17 +1,18 @@
 @import "src/commonStyles/mixins";
 @import 'src/commonStyles/variables';
 
-.leftBarContainer {
+.left-bar-container {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 95vh;
   flex: 1;
   max-width: 25vw;
+  min-width: 20rem;
 }
 
-.MenuContainer {
-  @include blockStyle($color-black);
+.menu-container {
+  @include block-style($color-black);
   margin-right: $blocks-margin;
   margin-bottom: $blocks-margin;
   height: 20%;
@@ -21,11 +22,15 @@
   align-items: flex-start;
 }
 
-.dataContainer {
-  @include blockStyle($color-black);
+.data-container {
+  @include block-style($color-black);
   margin-right: $blocks-margin;
   height: 80%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.filters-container {
+  flex-shrink: 0;
 }

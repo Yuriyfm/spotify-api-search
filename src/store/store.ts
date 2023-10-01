@@ -4,6 +4,9 @@ import modeReducer from '@/store/mode.slice'
 import categoriesReducer from '@/store/categories.slice'
 import genresReducer from '@/store/genres.slice'
 import playlistsReducer from '@/store/playlists.slice'
+import countriesReducer from '@/store/countries.slice'
+import yearsReducer from '@/store/years.slice'
+
 export const store = configureStore({
   reducer: {
     authToken: authTokenReducer,
@@ -11,6 +14,8 @@ export const store = configureStore({
     categories: categoriesReducer,
     genres: genresReducer,
     playlists: playlistsReducer,
+    countries: countriesReducer,
+    years: yearsReducer,
 }});
 
 export type RootState = ReturnType<typeof store.getState>
