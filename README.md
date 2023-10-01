@@ -24,11 +24,9 @@ NEXT_SPOTIFY_API_URL=https://api.spotify.com/v1/
 
 ## Технологический Стек
 - Next.js
+- Redux-Toolkit
 - TypeScript
 - SCSS
-
-## Дополнительные Инструменты
-- NextFont для оптимизации и загрузки пользовательских шрифтов.
 
 ## Ссылки и Ресурсы
 - [Next.js Документация](https://nextjs.org/docs)
